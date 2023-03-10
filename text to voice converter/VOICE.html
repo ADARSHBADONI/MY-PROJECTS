@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+	<head>
+		
+		<style>
+			/* CSS comes here */
+			body 
+			{
+			    font-family:arial;
+			    text-align: center;
+			    color: white;
+			    background-image: url('background.jpg');
+			}
+			input 
+			{
+			    padding: 10px;
+			    width: 300px;
+			    border: solid 2px;
+			}
+			div 
+			{
+			    margin:10px 0px;
+			}
+			button 
+			{
+			    padding:10px;
+			    background-color:purple;
+			    color:white ;
+			    border: 0px;
+			    cursor:pointer;
+			    border-radius: 5px;
+			}
+		</style>
+		
+		<title>JavaScript Text to Audio</title>
+	</head>
+	<body style="color:yellow;">
+	    
+	    <h1>JavaScript Text to Audio</h1>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div><input type="text" id="text-to-speech" placeholder="Enter text here"/></div>
+        <br>
+        <br>
+        <div>
+        	<button type="button" onclick="textToSpeech()">Start</button>
+        	<button type="button" onclick="cancelSpeech()">Cancel</button>
+        	<button type="button" onclick="pauseSpeech()">Pause</button>
+        	<button type="button" onclick="resumeSpeech()">Resume</button>
+        </div>
+        <br/>
+        <div><p><b style="color: red;">NOTE:</b> Enter text and click on button.</p></div>
+		
+
+		<script>
+			/* JS comes here */
+            function textToSpeech() 
+            {
+                let msg = document.getElementById("text-to-speech").value;
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 0.8;
+                speech.pitch = 1;
+                speech.onend=function () 
+                {
+                	alert('Speech has finished');
+                }
+                
+                window.speechSynthesis.speak(speech);
+            }
+            function resumeSpeech() 
+            {
+            	speechSynthesis.resume();	
+            }
+            function pauseSpeech() 
+            {
+	            speechSynthesis.pause();
+            }
+            function cancelSpeech() 
+            {
+            	speechSynthesis.cancel();
+            }
+		</script>
+
+
+	</body>
+</html>
