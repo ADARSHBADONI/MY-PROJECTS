@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoiled Fruit</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+        }
+        .message {
+            font-size: 2em;
+            margin: 0 0 20px 0;
+        }
+        .sub-message {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">The fruit can still be consumed!</div>
+        <p>Predicted remaining days: <span id="days">{{ days }}</span></p>
+    </div>
+
+    <script>
+        // Get the number of days from the HTML
+        const days = parseInt(document.getElementById('days').textContent, 10);
+
+        // Change the background color based on the number of days
+        if (days < 1) {
+            document.body.style.backgroundColor = '#ff6347'; // Vibrant red
+        } else if (days >= 1 && days < 3) {
+            document.body.style.backgroundColor = '#ffa500'; // Vibrant orange
+        } else if (days >= 3 && days < 5) {
+            document.body.style.backgroundColor = '#FFD700'; // Vibrant gold
+        } else {
+            document.body.style.backgroundColor = '#32CD32'; // Lime green
+        }
+    </script>
+</body>
+</html>
