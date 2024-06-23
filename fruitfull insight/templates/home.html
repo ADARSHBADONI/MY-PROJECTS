@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Major Project</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/static/css/main.css" />
+	<!-- <noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript> -->
+</head>
+
+<body class="is-preload">
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Welcome</a></li>
+					<li><a href="#one">Get Started</a></li>
+					<li><a href="#two">Need Help?</a></li>
+					<li><a href="#three">Get in touch</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Fruitful<span style="color: red;">Insight</span></h1>
+				<p>An ML and IOT based solution to predict the <br> expiration date of fruits.</p>
+				<ul class="actions">
+					<li><a href="#one" class="button scrolly">Get Started</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style2 spotlights">
+			<section>
+				<a href="#" class="image"><img src="../static/images/pic01.jpg" alt=""
+						data-position="center center" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Enter Manually</h2>
+						<p>Use this option if you have temperature, humidity, and gas evolved data handy.</p>
+						<ul class="actions">
+							<li><a href="{{ url_for('manual')}}" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+
+				<div class="content">
+					<div class="inner">
+						<h2>Use Sensors</h2>
+						<p>Use this option if you want to use temprature, humidity, and gas sensors.</p>
+						<ul class="actions">
+							<li><a href="{{ url_for('fetch')}}" class="button">Learn more</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="image"><img src="../static/images/pic02.jpg" alt="" data-position="top center" /></a>
+			</section>
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Help</h2>
+				<p>This is a food quality checking system, merging Internet of Things (IoT) and machine learning
+					technologies. Leveraging machine learning and IoT, we aim to provide an effective low-cost, e-nose
+					that can predict the expiry of fruits so that they can be consumed accordingly.</p>
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>How to Use?</h3>
+						<p>Simply put the temperature, humidity, and gas evolution values manually or via sensors.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-lock"></span>
+						<h3>What is the relation between gas released and fruit expiry?</h3>
+						<p>As the fruit spoils, it releases various gases. The MQ2 sensor can detect those gases, which
+							can be used to predict the expiry.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cog"></span>
+						<h3>What is the use of temperature and humidity then?</h3>
+						<p>Environment conditions like temperature and humidity impact the amount of gas released from
+							the fruit.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-desktop"></span>
+						<h3>From the Developers...</h3>
+						<p>The project is still in its initial state and is currently only able to predict the expiry of
+							bananas. As the data set will grow, we'll be able to predict the expiry of a wider array of
+							fruits :/</p>
+					</section>
+				</div>
+				<p>Still got doubts? Download and read our research paper here</p>
+				<ul class="actions">
+					<li><a href="../static/rp.pdf" class="button" download>Research Paper</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Contact Us</h2>
+				<p>Want to get in touch? Write your message here and we'll get back to you.</p>
+				<div class="split style1">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="5"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><a href="" class="button submit">Send Message</a></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>Address</h3>
+								<span>Graphic Era<br />
+									Dehradun, Uttarakhand<br />
+									India</span>
+							</li>
+							<li>
+								<h3>Email</h3>
+								<a href="#">xyz@gmail.com</a>
+							</li>
+							<li>
+								<h3>Phone</h3>
+								<span>ye toh ni batenge XD</span>
+							</li>
+							<li>
+								<h3>Social</h3>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span
+												class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span
+												class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
+									</li>
+									<li><a href="#" class="icon brands fa-instagram"><span
+												class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-linkedin-in"><span
+												class="label">LinkedIn</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/jquery.scrollex.min.js"></script>
+	<script src="static/js/jquery.scrolly.min.js"></script>
+	<script src="static/js/browser.min.js"></script>
+	<script src="static/js/breakpoints.min.js"></script>
+	<script src="static/js/util.js"></script>
+	<script src="static/js/main.js"></script>
+
+</body>
+
+</html>

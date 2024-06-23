@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Shelf Life Prediction</title>
+    <link rel="stylesheet" type="text/css" href="static/css/Sensor.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fruit Shelf Life Prediction</h1>
+        <div class="result">
+            <p>Remaining Shelf Life: <span id="shelf-life">Calculating...</span></p>
+        </div>
+        <div class="data">
+            <div class="data-item">
+                <p class="data-label">Methane:</p>
+                <p class="data-value" id="methane">Fetching...</p>
+            </div>
+            <div class="data-item">
+                <p class="data-label">Humidity:</p>
+                <p class="data-value" id="humidity">Fetching...</p>
+            </div>
+            <div class="data-item">
+                <p class="data-label">Temperature:</p>
+                <p class="data-value" id="temperature">Fetching...</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const delayInMilliseconds = 5000; // 5 seconds
+        setTimeout(function() {
+        window.location.href = '/bySensors';
+    }, delayInMilliseconds);
+});
+
+
+    </script>
+</body>
+</html>
+
